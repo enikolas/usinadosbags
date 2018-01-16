@@ -1,0 +1,81 @@
+.Servicos {
+	margin: 20px;
+}
+
+.Servicos nav {
+	width: 80%;
+	margin: 0 auto;
+	border-top: thin dashed gray;
+	border-bottom: thin dashed gray;
+}
+
+.Servicos nav ul {
+	margin: 0;
+	padding: 10px 0;
+	list-style: none;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	font-size: 13px;
+}
+
+.Servicos a:link,
+.Servicos a:visited,
+.Servicos a:focus,
+.Servicos a:hover,
+.Servicos a:active {
+	font-size: 13px;
+	color: black;
+	text-decoration: none;
+}
+
+.Servicos a.selected:link,
+.Servicos a.selected:visited,
+.Servicos a.selected:focus,
+.Servicos a.selected:hover,
+.Servicos a.selected:active {
+	font-style: italic;
+	color: rgb(76, 115, 170);
+}
+
+.Servicos article {
+	font-size: 13px;
+	padding: 20px;
+}
+
+.Servicos article h3 {
+	font-weight: normal;
+	font-style: italic;
+	text-align: center;
+	font-size: 13px;
+	padding-bottom: 15px;
+}
+
+.Servicos article p {
+	font-size: 13px;
+}
+
+.Servicos article .listas {
+	display: flex;
+}
+
+.Servicos article ul {
+	list-style-type: '- ';
+}
+
+.Servicos article ul.small {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 5px;
+}
+
+.Servicos article ul.small li {
+	font-size: 12px;
+}
+
+.Servicos article ul li.title {
+	font-weight: bold;
+	font-size: 14px;
+	padding-bottom: 10px;
+}

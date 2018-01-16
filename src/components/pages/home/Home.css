@@ -1,0 +1,92 @@
+.Home {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20px;
+}
+
+.Home .banner {
+	width: 100%;
+	height: 289px;
+	background: white url('./fundobanner.png') no-repeat;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+.Home .banner h3 {
+	padding: 10px 20px;
+	background-color: rgba(240,240,240,0.5);
+	font-size: 35px;
+	font-style: italic;
+	font-weight: 600;
+	margin: 0 auto;
+}
+
+.Home .content {
+	margin: 0;
+	padding: 20px;
+}
+
+.Home .content p {
+	text-align: center;
+	margin: 0;
+}
+
+.Home .images {
+	margin: 0;
+	padding: 0 20px;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+
+.Home .images a,
+.Home .images a:link,
+.Home .images a:visited,
+.Home .images a:focus {
+	text-decoration: none;
+}
+
+.Home .images a figcaption,
+.Home .images a:link figcaption,
+.Home .images a:visited figcaption,
+.Home .images a:focus figcaption {
+	background-color: #2b1075;
+	color: white;
+	padding: 5px 10px;
+	font-size: 13px;
+	border-radius: 6px;
+	margin-top: 5px;
+}
+
+.Home .images a:hover figcaption,
+.Home .images a:active figcaption {
+	background-color: #031017;
+	text-decoration: none;
+}
+
+.Home .images .logo {
+	margin: 0;
+	padding: 10px;
+}
+
+.Home .images .logo figure {
+	margin: 0;
+	width: 183px;
+	height: 171px;
+}
+
+.Home .images .bigbag {
+	margin: 10px;
+	border-radius: 10px;
+	background-color: #cecece;
+	padding: 10px 15px;
+}
+
+.Home .images .bigbag figure {
+	margin: 0;
+	width: 120px;
+	height: 149px;
+}

@@ -1,0 +1,23 @@
+.Fotos {
+	margin: 0;
+	padding: 10px;
+}
+
+.Fotos section {
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+
+.Fotos section figure {
+	margin: 15px 10px;
+	width: 339px;
+	height: 252px;
+}
+
+.Fotos section figure img {
+	margin: 0;
+	width: 339px;
+	height: 252px;
+}

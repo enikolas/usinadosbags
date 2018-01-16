@@ -1,0 +1,38 @@
+.Menu {
+	margin: 0;
+	padding: 0;
+	background-color: #272727;
+}
+
+.Menu ul {
+	padding: 10px 50px;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+}
+
+.Menu li {
+	list-style-type: none;
+	padding: 0 10px;
+}
+
+.Menu a:link,
+.Menu a:visited,
+.Menu a:focus {
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+}
+
+.Menu a:hover,
+.Menu a:active {
+	color: #76aadb;
+}
+
+.Menu a.selected:link,
+.Menu a.selected:visited,
+.Menu a.selected:focus {
+	text-decoration: underline;
+}

@@ -1,0 +1,33 @@
+.SobreNos {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: flex-start;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+.SobreNos .banner {
+	flex: 1 350px;
+	border-radius: 30px;
+	border: 1px solid white;
+	width: 100%;
+	min-width: 350px;
+	max-width: 482px;
+	max-height: 640px;
+	overflow: hidden;
+}
+
+.SobreNos .banner figure {
+	width: 482px;
+	height: 640px;
+	margin: 0;
+	padding: 0;
+}
+
+.SobreNos .content {
+	width: 100%;
+	flex: 1 350px;
+	min-width: 350px;
+	padding: 0 20px;
+	font-size: 13px;
+}

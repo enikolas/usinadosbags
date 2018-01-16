@@ -1,0 +1,77 @@
+.Header {
+	background-color: #15618f;
+	height: 190px;
+	padding: 20px;
+	color: white;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	min-width: 650px;
+	overflow: hidden;
+}
+
+.Header .logo {
+	background: #15618f url('./logo.png');
+	min-width: 440px;
+	width: 440px;
+	height: 155px;
+	margin: 0 auto;
+}
+
+.Header > .left-boxes, .Header > .right-boxes {
+	width: 80px;
+}
+
+.Header > .left-boxes > div, .Header > .right-boxes > div {
+	background-color: white;
+}
+
+.Header > .left-boxes {
+	justify-self: flex-start;
+}
+
+.Header > .right-boxes {
+	justify-self: flex-end;
+}
+
+.Header > .left-boxes > .box-1 {
+	margin-top: -18px;
+	margin-left: -40px;
+}
+
+.Header > .left-boxes > .box-2 {
+	margin-top: -8px;
+	margin-left: -40px;
+}
+
+.Header > .right-boxes > .box-1 {
+	margin-top: -10px;
+	margin-left: 69px;
+}
+
+.Header > .right-boxes > .box-2 {
+	margin-top: -12px;
+	margin-left: 86px;
+}
+
+.box-85px {
+	width: 85px;
+	height: 85px;
+}
+
+.box-55px {
+	width: 55px;
+	height: 55px;
+}
+
+.rotate-40deg {
+	transform: rotate(40deg);
+}
+
+.rotate-10deg {
+	transform: rotate(10deg);
+}
+
+.rotate-neg-15deg {
+	transform: rotate(-15deg);
+}

@@ -1,0 +1,26 @@
+.Footer {
+	margin: 0;
+	background-color: #031017;
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	padding: 15px 50px;
+}
+
+.Footer p {
+	color: white;
+	font-size: 13px;
+	margin: 3px;
+}
+
+.Footer h3 {
+	color: #76aadb;
+	font-weight: normal;
+	font-size: 14px;
+	margin: 10px 5px;
+}
+
+.Footer .right {
+	text-align: right;
+}

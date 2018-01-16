@@ -1,0 +1,47 @@
+.Produtos {
+	margin: 15px;
+}
+
+.Produtos section {
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+
+.Produto {
+	width: 48%;
+	margin: 10px 5px;
+}
+
+.Produto h3 {
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+
+.Produto .content {
+	display: flex;
+	align-content: flex-start;
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+
+.Produto .content p {
+	font-size: 13px;
+	line-height: 1.5;
+	flex: 1;
+	padding: 20px;
+	margin-top: 0;
+}
+
+.Produto .content figure {
+	flex: 1;
+	max-width: 132px;
+	margin: 0;
+	padding: 0;
+}
+
+.Produto .content figure img {
+	margin: 0;
+	padding: 0;
+}
