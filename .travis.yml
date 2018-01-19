@@ -7,15 +7,16 @@ env:
     
 node_js:
 - lts/*
-- node
+
 script:
-- npm lint
+- npm run lint
+
 jobs:
   include:
   - stage: deploy
     node_js: node
     script:
-    - npm build
+    - npm run build
     deploy:
       provider: firebase
       skip_cleanup: true
