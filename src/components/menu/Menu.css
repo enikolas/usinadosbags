@@ -4,7 +4,7 @@
 	background-color: #272727;
 }
 
-.Menu ul {
+.Menu .MainMenu ul {
 	padding: 10px 50px;
 	margin: 0;
 	list-style: none;
@@ -13,26 +13,103 @@
 	justify-content: space-around;
 }
 
-.Menu li {
+.Menu .MainMenu li {
 	list-style-type: none;
 	padding: 0 10px;
 }
 
-.Menu a:link,
-.Menu a:visited,
-.Menu a:focus {
-	font-size: 14px;
+.Menu .MainMenu a:link,
+.Menu .MainMenu a:visited,
+.Menu .MainMenu a:focus,
+.Menu .MainMenu a:active {
 	color: white;
 	text-decoration: none;
 }
 
-.Menu a:hover,
-.Menu a:active {
+.Menu .MainMenu a:hover {
 	color: #76aadb;
 }
 
-.Menu a.selected:link,
-.Menu a.selected:visited,
-.Menu a.selected:focus {
+.Menu .MainMenu li.selected a:link,
+.Menu .MainMenu li.selected a:visited,
+.Menu .MainMenu li.selected a:focus {
 	text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+	.Menu {
+		width: 100%;
+	}
+
+	.Menu .MainMenu {
+		z-index: 10;
+		width: 80%;
+		max-width: 280px;
+		height: 100%;
+		background-color: white;
+		position: fixed;
+		top: 0;
+		/* This trasform moves the drawer off canvas. */
+		-webkit-transform: translate(-100%, 0);
+		transform: translate(-100%, 0);
+		/* Optionally, we animate the drawer. */
+		transition: transform 0.3s ease;
+	}
+
+	.Menu .MainMenu.open {
+		-webkit-transform: translate(0, 0);
+    	transform: translate(0, 0);
+	}
+
+	.Menu .MainMenu ul {
+		display: list-item;
+		margin: 80px 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.Menu .MainMenu li {
+		height: 48px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0;
+	}
+
+	.Menu .MainMenu li:before {
+		content: '⬤';
+		position: absolute;
+		left: 16px;
+		font-size: 30px;
+		color: rgba(0, 0, 0, 0.3);
+	}
+
+	.Menu .MainMenu li.selected {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	.Menu .MainMenu li:active::before,
+	.Menu .MainMenu li.selected::before {
+		color: #76aadb;
+	}
+
+	.Menu .MainMenu a:link,
+	.Menu .MainMenu a:visited,
+	.Menu .MainMenu a:focus,
+	.Menu .MainMenu a:hover,
+	.Menu .MainMenu a:active {
+		color: black;
+		text-decoration: none;
+		font-weight: 500;
+		margin-left: 72px;
+	}
+	
+	.Menu .MainMenu li.selected a:link,
+	.Menu .MainMenu li.selected a:visited,
+	.Menu .MainMenu li.selected a:focus {
+		text-decoration: none;
+		color: #76aadb;
+	}
 }

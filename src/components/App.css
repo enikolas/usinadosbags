@@ -1,6 +1,6 @@
 .App {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   padding: 0;
   overflow: hidden;
 }
@@ -8,4 +8,12 @@
 .BrowserRouter {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  .App {
+    width: 800px;
+    margin: 0 auto;
+  }
+
 }

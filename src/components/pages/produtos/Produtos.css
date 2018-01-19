@@ -15,7 +15,6 @@
 }
 
 .Produto h3 {
-	font-size: 14px;
 	letter-spacing: 2px;
 }
 
@@ -27,7 +26,6 @@
 }
 
 .Produto .content p {
-	font-size: 13px;
 	line-height: 1.5;
 	flex: 1;
 	padding: 20px;

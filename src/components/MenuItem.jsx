@@ -6,9 +6,11 @@ const MenuItem = ({ label, to, path }) => {
   const className = isSelected ? 'selected' : ''
 
   return (
-    <Link to={to} className={className}>
-      {label}
-    </Link>
+    <li className={className}>
+      <Link to={to}>
+        {label}
+      </Link>
+    </li>
   )
 }
 

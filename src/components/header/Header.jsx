@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './Header.css'
 
 const Header = () => (
@@ -8,6 +9,10 @@ const Header = () => (
       <div className='box-2 box-85px rotate-40deg' />
     </div>
     <div className='logo' />
+    <div className='title'>
+      <h1>Usina dos Bags</h1>
+      <h3>Preço e qualidade, quem usa sabe!</h3>
+    </div>
     <div className='right-boxes'>
       <div className='box-1 box-85px rotate-40deg' />
       <div className='box-2 box-55px rotate-neg-15deg' />

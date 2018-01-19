@@ -9,7 +9,7 @@ import bigbag03 from './bigbag03.png'
 const Home = () => (
   <div className='Home'>
     <section className='banner'>
-      <h3>Big Bags semi novos e usados</h3>
+      <h1>Big Bags semi novos e usados</h1>
     </section>
 
     <section className='content'>

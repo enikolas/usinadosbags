@@ -15,42 +15,30 @@ const Servicos = ({ location: { pathname } }) => (
     <section className='content-picker'>
       <nav>
         <ul>
-          <li>
-            <MenuItem
-              label='Big Bags'
-              to='/servicos/bigbags'
-              path={pathname} />
-          </li>
-          <li>
-            <MenuItem
-              label='Serviços'
-              to='/servicos/servicos'
-              path={pathname} />
-          </li>
-          <li>
-            <MenuItem
-              label='Utilização'
-              to='/servicos/utilizacao'
-              path={pathname} />
-          </li>
-          <li>
-            <MenuItem
-              label='Manutenção'
-              to='/servicos/manutencao'
-              path={pathname} />
-          </li>
-          <li>
-            <MenuItem
-              label='Benefícios'
-              to='/servicos/beneficios'
-              path={pathname} />
-          </li>
-          <li>
-            <MenuItem
-              label='Vantagens'
-              to='/servicos/vantagens'
-              path={pathname} />
-          </li>
+          <MenuItem
+            label='Big Bags'
+            to='/servicos/bigbags'
+            path={pathname} />
+          <MenuItem
+            label='Serviços'
+            to='/servicos/servicos'
+            path={pathname} />
+          <MenuItem
+            label='Utilização'
+            to='/servicos/utilizacao'
+            path={pathname} />
+          <MenuItem
+            label='Manutenção'
+            to='/servicos/manutencao'
+            path={pathname} />
+          <MenuItem
+            label='Benefícios'
+            to='/servicos/beneficios'
+            path={pathname} />
+          <MenuItem
+            label='Vantagens'
+            to='/servicos/vantagens'
+            path={pathname} />
         </ul>
       </nav>
     </section>
