@@ -10,9 +10,9 @@
   flex-direction: column;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 960px) {
   .App {
-    width: 800px;
+    width: 960px;
     margin: 0 auto;
   }
 
