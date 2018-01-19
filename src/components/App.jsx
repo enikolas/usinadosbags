@@ -5,6 +5,7 @@ import Header from './header/Header'
 import Menu from './menu/Menu'
 import Content from './content/Content'
 import Footer from './footer/Footer'
+import '../fonts/fonts.css'
 import './App.css'
 
 const App = () => (
