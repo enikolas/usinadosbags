@@ -8,17 +8,34 @@
 	padding: 15px 50px;
 }
 
+.Footer div {
+	width: 48%;
+}
+
 .Footer p {
 	color: white;
 	margin: 3px;
 }
 
-.Footer h3 {
+.Footer h5 {
 	color: #76aadb;
 	font-weight: normal;
-	margin: 10px 5px;
+	margin: 0;
+	padding: 5px;
+	font-size: 18px;
 }
 
 .Footer .right {
 	text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+	.Footer div {
+		width: 100%;
+	}
+
+	.Footer .right {
+		text-align: initial;
+		margin-top: 10px;
+	}
 }
