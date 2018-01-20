@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5 {
   margin: 0; 
 }
 
-header, nav, footer, section, article, div, ul, li {
+header, nav, footer, section, article, div, ul, li, h1, h2, h3, h4, h5 {
   box-sizing: border-box;
 }
 

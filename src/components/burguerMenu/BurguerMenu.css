@@ -17,19 +17,21 @@
 		height: 100%;
 		display: block;
 		position: fixed;
+		z-index: 9;
 	}
 
 	.BurguerMenu button,
 	.BurguerMenu button:focus {
 		display: block;
 		position: fixed;
-		right: 0;
+		left: 0;
 		top: 0;
 		margin: 0;
 		padding: 1em;
 		background: rgba(0,0,0,0);
 		border: none;
 		outline: none;
+		z-index: 5;
 	}
 	
 	.BurguerMenu button::-moz-focus-inner {

@@ -17,10 +17,9 @@
 
 .Home .banner h1 {
 	padding: 10px 20px;
+	width: 100%;
 	background-color: rgba(240,240,240,0.5);
-	font-style: italic;
-	font-weight: 600;
-	margin: 0 auto;
+	text-align: center;
 }
 
 .Home .content {
@@ -88,4 +87,22 @@
 	margin: 0;
 	width: 120px;
 	height: 149px;
+}
+
+@media screen and (max-width: 600px) {
+	.Home .content p {
+		text-align: initial;
+		margin-bottom: 1rem;
+	}
+
+	.Home .banner {
+		height: 100%;
+		background: initial;
+	}
+
+	.Home .banner h1 {
+		width: 100%;
+		font-size: 1.3rem;
+		padding: 2rem 1rem;
+	}
 }
