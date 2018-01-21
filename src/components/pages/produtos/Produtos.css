@@ -1,39 +1,43 @@
 .Produtos {
-	margin: 15px;
+	margin: 1rem;
 }
 
 .Produtos section {
 	display: flex;
 	align-content: center;
 	justify-content: space-around;
-	flex-flow: row wrap;
+	flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .Produto {
-	width: 48%;
-	margin: 10px 5px;
+	flex: 1 300px;
+	width: 50%;
+  padding: 0.5rem;
 }
 
 .Produto h3 {
 	letter-spacing: 2px;
+  margin-bottom: 1rem;
 }
 
 .Produto .content {
 	display: flex;
 	align-content: flex-start;
 	justify-content: space-around;
-	flex-flow: row wrap;
+	flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .Produto .content p {
-	line-height: 1.5;
-	flex: 1;
-	padding: 20px;
+  flex: 2;
+  line-height: 1.5;
+	padding: 1rem;
 	margin-top: 0;
 }
 
 .Produto .content figure {
-	flex: 1;
+  flex: 1 125px;
 	max-width: 132px;
 	margin: 0;
 	padding: 0;
@@ -42,4 +46,22 @@
 .Produto .content figure img {
 	margin: 0;
 	padding: 0;
+}
+
+@media screen and (max-width: 400px) {
+	.Produto .content {
+		align-content: center;
+		justify-content: center;
+	}
+
+	.Produto .content p {
+		flex: 2 250px;
+		width: 100%;
+		padding: 1rem 0;
+	}
+
+	.Produto .content figure {
+		flex: 1 125px;
+		width: 100%;
+	}
 }

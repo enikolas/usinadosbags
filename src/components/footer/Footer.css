@@ -5,11 +5,11 @@
 	align-content: center;
 	justify-content: space-between;
 	flex-flow: row wrap;
-	padding: 15px 50px;
 }
 
 .Footer div {
-	width: 48%;
+	width: calc(50% - 2rem);
+  margin: 1rem;
 }
 
 .Footer p {
@@ -29,13 +29,12 @@
 	text-align: right;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 459px) {
 	.Footer div {
 		width: 100%;
 	}
 
 	.Footer .right {
 		text-align: initial;
-		margin-top: 10px;
 	}
 }

@@ -42,6 +42,7 @@
 }
 
 .Home .images a,
+.Home .images a:active,
 .Home .images a:link,
 .Home .images a:visited,
 .Home .images a:focus {
@@ -49,6 +50,7 @@
 }
 
 .Home .images a figcaption,
+.Home .images a:active figcaption,
 .Home .images a:link figcaption,
 .Home .images a:visited figcaption,
 .Home .images a:focus figcaption {
@@ -59,8 +61,7 @@
 	margin-top: 5px;
 }
 
-.Home .images a:hover figcaption,
-.Home .images a:active figcaption {
+.Home .images a:hover figcaption {
 	background-color: #031017;
 	text-decoration: none;
 }
