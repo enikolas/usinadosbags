@@ -6,22 +6,22 @@ import MenuItem from '../MenuItem'
 import BurguerMenu from '../burguerMenu/BurguerMenu'
 
 class Menu extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = { isOpen: false }
   }
-  
-  render() {
-    const { location: { pathname } } = this.props;
-    const { isOpen } = this.state;
+
+  render () {
+    const { location: { pathname } } = this.props
+    const { isOpen } = this.state
 
     return (
-      <nav className='Menu' onClick={ () => { isOpen && this.setState({ isOpen: false }) }}>
+      <nav className='Menu' onClick={() => { isOpen && this.setState({ isOpen: false }) }}>
         <BurguerMenu
           isOpen={isOpen}
-          onClick={ () => { this.setState({ isOpen: !isOpen }) } } />
-        <div className={`MainMenu ${ isOpen ? 'open' : '' }`}> 
+          onClick={() => { this.setState({ isOpen: !isOpen }) }} />
+        <div className={`MainMenu ${isOpen ? 'open' : ''}`}>
           <ul>
             <MenuItem
               label='home'
