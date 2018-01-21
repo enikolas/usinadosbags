@@ -12,7 +12,7 @@ import MenuItem from '../../MenuItem'
 
 const Servicos = ({ location: { pathname } }) => (
   <div className='Servicos'>
-    <section className='content-picker'>
+    <section>
       <nav>
         <ul>
           <MenuItem

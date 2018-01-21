@@ -66,3 +66,58 @@
 	font-weight: bold;
 	padding-bottom: 10px;
 }
+
+@media screen and (max-width: 600px) {
+  .Servicos nav {
+    position: fixed;
+    top: 57px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    border: 0;
+    background-color: #15618f;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .Servicos nav ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+  
+  .Servicos nav ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 1.1rem;
+    border-bottom: 5px solid #15618f;
+    transition: border-bottom 0.3s ease;
+  }
+
+  .Servicos a,
+  .Servicos a:link,
+  .Servicos a:visited,
+  .Servicos a:focus,
+  .Servicos a:hover,
+  .Servicos a:active {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+  }
+  
+  .Servicos li.selected a:link,
+  .Servicos li.selected a:visited,
+  .Servicos li.selected a:focus,
+  .Servicos li.selected a:hover,
+  .Servicos li.selected a:active {
+    font-style: initial;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .Servicos li.selected {
+    border-bottom: 5px solid rgba(255, 255, 255, 0.7);
+  }
+
+  .Servicos .content {
+    margin-top: 4rem;
+  }
+}
