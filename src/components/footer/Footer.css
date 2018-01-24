@@ -8,8 +8,8 @@
 }
 
 .Footer div {
-	width: calc(50% - 2rem);
-  margin: 1rem;
+	width: calc(50% - 6rem);
+  margin: 1rem 3rem;
 }
 
 .Footer p {
@@ -31,7 +31,8 @@
 
 @media screen and (max-width: 459px) {
 	.Footer div {
-		width: 100%;
+    width: 100%;
+    margin: 1rem 3rem;
 	}
 
 	.Footer .right {
