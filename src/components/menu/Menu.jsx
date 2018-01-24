@@ -26,27 +26,33 @@ class Menu extends Component {
             <MenuItem
               label='home'
               to='/'
-              path={pathname} />
+              path={pathname}
+              icon='⬤' />
             <MenuItem
               label='sobre nós'
               to='/sobrenos'
-              path={pathname} />
+              path={pathname}
+              icon='⬤' />
             <MenuItem
               label='produtos'
               to='/produtos'
-              path={pathname} />
+              path={pathname}
+              icon='⬤' />
             <MenuItem
               label='fotos'
               to='/fotos'
-              path={pathname} />
+              path={pathname}
+              icon='⬤' />
             <MenuItem
               label='serviços'
               to='/servicos'
-              path={pathname} />
+              path={pathname}
+              icon='⬤' />
             <MenuItem
               label='contato'
               to='/contato'
-              path={pathname} />
+              path={pathname}
+              icon='⬤' />
           </ul>
         </div>
       </nav>

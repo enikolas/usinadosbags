@@ -1,11 +1,11 @@
 .Menu {
-	margin: 0;
+  margin: 0;
 	padding: 0;
-	background-color: #272727;
+  background-color: #272727;
 }
 
 .Menu .MainMenu ul {
-	padding: 10px 50px;
+  padding: 10px 50px;
 	margin: 0;
 	list-style: none;
 	display: flex;
@@ -14,26 +14,29 @@
 }
 
 .Menu .MainMenu li {
-	list-style-type: none;
+  list-style-type: none;
 	padding: 0 10px;
 }
 
+.Menu .MainMenu li .icon {
+  display: none;
+}
+
+.Menu .MainMenu a,
 .Menu .MainMenu a:link,
 .Menu .MainMenu a:visited,
 .Menu .MainMenu a:focus,
 .Menu .MainMenu a:active {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .Menu .MainMenu a:hover {
 	color: #76aadb;
 }
 
-.Menu .MainMenu li.selected a:link,
-.Menu .MainMenu li.selected a:visited,
-.Menu .MainMenu li.selected a:focus {
-	text-decoration: underline;
+.Menu .MainMenu li.selected a {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 600px) {
@@ -46,70 +49,70 @@
 		width: 80%;
 		max-width: 280px;
 		height: 100%;
-		background-color: white;
+    background-color: white;
 		position: fixed;
 		top: 0;
-		/* This trasform moves the drawer off canvas. */
 		-webkit-transform: translate(-100%, 0);
-		transform: translate(-100%, 0);
-		/* Optionally, we animate the drawer. */
-		transition: transform 0.3s ease;
+    transform: translate(-100%, 0);
+    transition: transform 0.3s ease;
 	}
 
 	.Menu .MainMenu.open {
 		-webkit-transform: translate(0, 0);
-    	transform: translate(0, 0);
+    transform: translate(0, 0);
+    transition: transform 0.3s ease;
 	}
 
 	.Menu .MainMenu ul {
-		display: list-item;
-		margin: 80px 0;
-		padding: 0;
-		width: 100%;
-		height: 100%;
-	}
+    display: list-item;
+    margin: 80px 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-	.Menu .MainMenu li {
-		height: 48px;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding: 0;
-	}
+  .Menu .MainMenu li {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
 
-	.Menu .MainMenu li:before {
-		content: '⬤';
-		position: absolute;
-		left: 16px;
-		font-size: 30px;
-		color: rgba(0, 0, 0, 0.3);
-	}
+  .Menu .MainMenu li .icon {
+    display: initial;
+    width: 72px;
+    margin: 0;
+    padding-top: 0.3rem;
+    padding-left: 16px;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.3);
+  }
 
-	.Menu .MainMenu li.selected {
-		background-color: rgba(0, 0, 0, 0.1);
-	}
+  .Menu .MainMenu li:hover,
+  .Menu .MainMenu li.selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 
-	.Menu .MainMenu li:active::before,
-	.Menu .MainMenu li.selected::before {
-		color: #76aadb;
-	}
+  .Menu .MainMenu li.selected .icon {
+    color: #76aadb;
+  }
 
-	.Menu .MainMenu a:link,
-	.Menu .MainMenu a:visited,
-	.Menu .MainMenu a:focus,
-	.Menu .MainMenu a:hover,
-	.Menu .MainMenu a:active {
-		color: black;
-		text-decoration: none;
-		font-weight: 500;
-		margin-left: 72px;
-	}
-	
-	.Menu .MainMenu li.selected a:link,
-	.Menu .MainMenu li.selected a:visited,
-	.Menu .MainMenu li.selected a:focus {
-		text-decoration: none;
-		color: #76aadb;
-	}
+  .Menu .MainMenu a,
+  .Menu .MainMenu a:link,
+  .Menu .MainMenu a:visited,
+  .Menu .MainMenu a:focus,
+  .Menu .MainMenu a:active {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    width: calc(100% - 72px);
+    padding: 0.9rem 0;
+    margin: 0;
+    border: none;
+  }
+
+  .Menu .MainMenu li.selected a {
+    color: #76aadb;
+    text-decoration: none;
+  }
 }
