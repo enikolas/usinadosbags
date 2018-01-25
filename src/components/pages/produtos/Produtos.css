@@ -4,6 +4,7 @@
 
 .Produtos section {
 	display: flex;
+	padding: 1rem;
 	align-content: center;
 	justify-content: space-around;
 	flex-direction: row;
