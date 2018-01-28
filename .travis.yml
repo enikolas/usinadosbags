@@ -1,30 +1,25 @@
 sudo: false
 language: node_js
 os: linux
-env:
-  matrix:
-  - CI=true
-    
-node_js:
-- lts/*
+
+cache:
+  directories:
+    - "node_modules"
 
 script:
-- npm run lint
-
-jobs:
-  include:
-  - stage: deploy
-    node_js: node
-    script:
-    - npm run build
-    deploy:
-      provider: firebase
-      skip_cleanup: true
-      token:
-        secure: iZY/h/0JG/lq9UF6Rx1mm/ENqrUgej9jR+3TjZtMRzL6M310r2ILkcGYWGs93FgiSABhlMqp5o4fz2aZLpnaIcZLQqJyZ8VPsKD/9xINivM5hA5HFWRiHXEMgQtU70n0RK4ihFarJihQ93slg/gogNUWgWTvCdsyNiPEyHzWo8GzIxfW1Q7u9e+nbuWvU4bY3cL6IhQWOiQ4mjCBWXwrVVcZT5j6yCWgIBpVG3Uz3Mi4vwvTfQwhgs3qN49BG05c0IYEEZRlv9NEh9PXtKPje9xEMz7xSvjHMnsgH6BtXEOUZYIwchAiZLiWj5KkhOSHCIF104rNivSIAEwguE1tx3moOAePJNAEny3XLlsluEAxXzFRBsP0YV5AjJsQgDPQz/wcYNZu92tARFRjN9P9gbs2u6mKhRnR9I2qjy5fXTQbQD9L7kBPuyHujugDgcHQlmXNLXzOAZ5zfg4Ho9ZbM/SHLQSzmBqs1BvVU0jYY088xI2NDK7rx1U1ND7orAInveAqqe+tblUI8XOJMdQbxrTovmHgHhz169opjSztsByV05Y4EBE7nEqjFlx/0KcvwW4HjGyx2884/uYpI+PZntDg/7U1kwqCU7SK+XpryvIgPBAJSzUCK93Dj3bo14Lot1LG57AwAyffsP/8YuGc39LHFVnocne6kB/DZY+Gx+U=
-    deploy:
-      provider: script
-      script: scripts/deploy.sh
-      skip_cleanup: true
-      on:
-        tags: true
+  - npm run lint
+  - npm run build
+    
+deploy:
+  - provider: firebase
+    skip_cleanup: true
+    on:
+      tags: true
+      all_branches: true
+    token:
+      secure: iZY/h/0JG/lq9UF6Rx1mm/ENqrUgej9jR+3TjZtMRzL6M310r2ILkcGYWGs93FgiSABhlMqp5o4fz2aZLpnaIcZLQqJyZ8VPsKD/9xINivM5hA5HFWRiHXEMgQtU70n0RK4ihFarJihQ93slg/gogNUWgWTvCdsyNiPEyHzWo8GzIxfW1Q7u9e+nbuWvU4bY3cL6IhQWOiQ4mjCBWXwrVVcZT5j6yCWgIBpVG3Uz3Mi4vwvTfQwhgs3qN49BG05c0IYEEZRlv9NEh9PXtKPje9xEMz7xSvjHMnsgH6BtXEOUZYIwchAiZLiWj5KkhOSHCIF104rNivSIAEwguE1tx3moOAePJNAEny3XLlsluEAxXzFRBsP0YV5AjJsQgDPQz/wcYNZu92tARFRjN9P9gbs2u6mKhRnR9I2qjy5fXTQbQD9L7kBPuyHujugDgcHQlmXNLXzOAZ5zfg4Ho9ZbM/SHLQSzmBqs1BvVU0jYY088xI2NDK7rx1U1ND7orAInveAqqe+tblUI8XOJMdQbxrTovmHgHhz169opjSztsByV05Y4EBE7nEqjFlx/0KcvwW4HjGyx2884/uYpI+PZntDg/7U1kwqCU7SK+XpryvIgPBAJSzUCK93Dj3bo14Lot1LG57AwAyffsP/8YuGc39LHFVnocne6kB/DZY+Gx+U=
+  - provider: script
+    script: scripts/deploy.sh
+    skip_cleanup: true
+    on:
+      tags: true
