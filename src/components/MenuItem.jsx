@@ -8,7 +8,7 @@ const MenuItem = ({ label, to, path, icon }) => {
   return (
     <li className={className}>
       <div className='icon'>
-        { icon ? icon : '' }
+        { icon }
       </div>
       <Link to={to}>
         {label}
