@@ -29,7 +29,7 @@
 	text-align: right;
 }
 
-@media screen and (max-width: 459px) {
+@media screen and (max-width: 550px) {
 	.Footer div {
     width: 100%;
     margin: 1rem 3rem;
