@@ -2,9 +2,6 @@ sudo: false
 language: node_js
 os: linux
 
-env:
-  - PUBLIC_URL=http://www.usinadosbags.com.br/
-
 cache:
   directories:
     - "node_modules"
