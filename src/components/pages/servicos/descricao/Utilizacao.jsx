@@ -1,57 +1,92 @@
 import React from 'react'
 
+const UtilizacaoList = ({title, items}) => (
+  <ul className='small'>
+    <li className='title'>{title}</li>
+    { items.map(item => <li>{item}</li>) }
+  </ul>
+)
+
+const agricultura = {
+  title: 'Agricultura',
+  items: [
+    'Arroz',
+    'Aveia',
+    'Café',
+    'Cevada',
+    'Corretivos de solos',
+    'Defensivos agrícolas',
+    'Fertilizantes',
+    'Milho',
+    'Sementes',
+    'Soja',
+    'Trigo'
+  ]
+}
+
+const industriaAlimentos = {
+  title: 'Indústria de alimentos',
+  items: [
+    'Ácidos cítricos',
+    'Açúcar',
+    'Farelos em geral',
+    'Farinha de trigo e mandioca',
+    'Farinha de peixe',
+    'Fermento, pictina',
+    'Gelatinas',
+    'Sal'
+  ]
+}
+
+const quimicaPetroquimica = {
+  title: 'Química e Petroquímica',
+  items: [
+    'Ácido adípico',
+    'Ácido tereflá',
+    'Anidro flálico',
+    'Bisfenol',
+    'Carbonato de bário',
+    'Enxofre',
+    'Piche floculado',
+    'Polímeros (PP, PEAD, PEBD, PVC)',
+    'Tripolifosfato de sódio'
+  ]
+}
+
+const minerios = {
+  title: 'Minérios',
+  items: [
+    'Alumina',
+    'Bauxita',
+    'Betonita',
+    'Carbureto de silício',
+    'Ferro cromo',
+    'Ferro silício metálico',
+    'Vermiculita',
+    'Zirconita'
+  ]
+}
+
 const Utilizacao = () => (
   <article>
     <h3>Veja abaixo alguns exemplos de <b>utilização</b></h3>
     <div className='listas'>
-      <ul className='small'>
-        <li className='title'>Agricultura</li>
-        <li>Arroz</li>
-        <li>Aveia</li>
-        <li>Café</li>
-        <li>Cevada</li>
-        <li>Corretivos de solos</li>
-        <li>Defensivos agrícolas</li>
-        <li>Fertilizantes</li>
-        <li>Milho</li>
-        <li>Sementes</li>
-        <li>Soja</li>
-        <li>Trigo</li>
-      </ul>
-      <ul className='small'>
-        <li className='title'>Indústria de alimentos</li>
-        <li>Ácidos cítricos</li>
-        <li>Açúcar</li>
-        <li>Farelos em geral</li>
-        <li>Farinha de trigo e mandioca</li>
-        <li>Farinha de peixe</li>
-        <li>Fermento, pictina</li>
-        <li>Gelatinas</li>
-        <li>Sal</li>
-      </ul>
-      <ul className='small'>
-        <li className='title'>Química e Petroquímica</li>
-        <li>Ácido adípico</li>
-        <li>Ácido tereflá</li>
-        <li>Anidro flálico</li>
-        <li>Bisfenol</li>
-        <li>Carbonato de bário</li>
-        <li>Enxofre</li>
-        <li>Piche floculado</li>
-        <li>Polímeros (PP, PEAD, PEBD, PVC)</li>
-        <li>Tripolifosfato de sódio</li>
-      </ul>
-      <ul className='small'>
-        <li className='title'>Minérios</li>
-        <li>Alumina</li>
-        <li>Bauxita</li>
-        <li>Betonita</li>
-        <li>Carbureto de silício</li>
-        <li>Ferro cromo</li>
-        <li>Ferro silício metálico</li>
-        <li>Vermiculita</li>
-        <li>Zirconita</li>
-      </ul>
+      <UtilizacaoList
+        title={agricultura.title}
+        items={agricultura.items} />
+
+      <UtilizacaoList
+        title={industriaAlimentos.title}
+        items={industriaAlimentos.items} />
+
+      <UtilizacaoList
+        title={quimicaPetroquimica.title}
+        items={quimicaPetroquimica.items} />
+
+      <UtilizacaoList
+        title={minerios.title}
+        items={minerios.items} />
+
     </div>
   </article>
 )
