@@ -8,6 +8,7 @@ import Produtos from '../pages/produtos/Produtos'
 import Fotos from '../pages/fotos/Fotos'
 import Servicos from '../pages/servicos/Servicos'
 import Contato from '../pages/contato/Contato'
+import Catalogo from '../catalogo/Catalogo'
 
 const Content = () => (
   <div className='Content'>
@@ -17,6 +18,7 @@ const Content = () => (
     <Route path='/fotos' component={Fotos} />
     <Route path='/servicos' component={Servicos} />
     <Route path='/contato' component={Contato} />
+    <Route path='/catalogo' component={Catalogo} />
   </div>
 )
 

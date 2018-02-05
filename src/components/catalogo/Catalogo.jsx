@@ -1,86 +1,28 @@
 import React from 'react'
+import FlipPage from 'react-flip-page'
 
-import './responsive-flipbook'
-import './css/style'
-import './css/page-style'
-import './css/flipbook'
+import './Catalogo.css'
+import capa from './imagens/capazoom.png'
+import page2 from './imagens/02zoom.png'
+import page3 from './imagens/03zoom.png'
+import page4 from './imagens/04zoom.png'
+import page5 from './imagens/05zoom.png'
+import page6 from './imagens/06zoom.png'
+import page7 from './imagens/07zoom.png'
+import contraCapa from './imagens/contracapazoom.png'
+
+const images = [capa, page2, page3, page4, page5, page6, page7, contraCapa]
 
 const Catalogo = () => (
-  <div id='flipbook-container-1' class='flipbook-container'>
-    <div id='flipbook-1' class='flipbook'>
-      <div class='fb-page'>
-        <div class='page-content'>
-          <img src='imagens/capa.png' class='bg-img' />
-          <img src='imagens/capazoom.png' class='bg-img zoom-large' />
-
-        </div>
-      </div>
-
-      <div class='fb-page double'>
-        <div class='page-content'>
-          <div class='container'>
-            <div class='preview-content features left'>
-              &nbsp;
-            </div>
-            <div class='preview-content features right'>
-              &nbsp;
-            </div>
-            <img src='imagens/02-03.png' class='bg-img' />
-            <img src='imagens/02-03zoom.png' class='bg-img zoom-large' />
-
-          </div>
-        </div>
-      </div>
-
-      <div class='fb-page double'>
-        <div class='page-content'>
-          <div class='container'>
-            <div class='preview-content features left'>
-              &nbsp;
-            </div>
-            <div class='preview-content features right'>
-              &nbsp;
-            </div>
-            <img src='imagens/04-05.png' class='bg-img' />
-            <img src='imagens/04-05zoom.png' class='bg-img zoom-large' />
-
-          </div>
-        </div>
-      </div>
-
-      <div class='fb-page double'>
-        <div class='page-content'>
-          <div class='container'>
-            <div class='preview-content features left'>
-              &nbsp;
-            </div>
-            <div class='preview-content features right'>
-              &nbsp;
-            </div>
-            <img src='imagens/06-07.png' class='bg-img' />
-            <img src='imagens/06-07zoom.png' class='bg-img zoom-large' />
-
-          </div>
-        </div>
-      </div>
-
-      <div class='fb-page'>
-        <div class='page-content'>
-          <img src='imagens/contracapa.png' class='bg-img' />
-          <img src='imagens/contracapazoom.png' class='bg-img zoom-large' />
-
-        </div>
-      </div>
-
-    </div>
-    <div id='fb-nav-1' class='fb-nav mobile stacked'>
-      <ul>
-        <li class='toc left'>Table Of Content</li>
-        <li class='zoom center'>Zoom</li>
-        <li class='slideshow center'>Slide Show</li>
-        <li class='show-all right'>Show All Pages</li>
-      </ul>
-    </div>
+  <div className="Catalogo">
+    <FlipPage
+        width={421}
+        height={586}
+        orientation='horizontal'
+        showTouchHint={true}
+        flipOnTouch={true}>
+      { images.map((image, i) => <img key={i} src={`${image}`} />) }
+    </FlipPage>
   </div>
 )
 

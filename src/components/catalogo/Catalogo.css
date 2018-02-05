@@ -1,0 +1,9 @@
+.Catalogo {
+  margin: 1rem auto;
+  padding: 0;
+  width: calc(422px + 1rem);
+  height: calc(586px + 1rem);
+  box-sizing: border-box;
+  border: 0.5rem solid #ECECEC;
+  border-radius: 0.5rem;
+}
