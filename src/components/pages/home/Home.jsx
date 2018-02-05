@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './Home.css'
 import logo from './logo.png'
@@ -18,16 +19,12 @@ const Home = () => (
     </section>
 
     <section className='images'>
-      <a
-        href='http://usinadosbags.com.br/catalogo/catalogo.php'
-        className='catalogo'
-        target='_blank'
-        rel='noopener noreferrer'>
+      <Link to='/novocatalogo'>
         <figure className='logo'>
           <img src={logo} alt='Logo da empresa Usina dos Bags' />
           <figcaption>Conheça nosso Catálogo!</figcaption>
         </figure>
-      </a>
+      </Link>
       <figure className='bigbag'>
         <img src={bigbag01} alt='Big bag com válvula superior' />
       </figure>

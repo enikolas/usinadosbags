@@ -10,14 +10,14 @@ import './App.css'
 
 const App = () => (
   <div className='App'>
-    <Header />
     <BrowserRouter>
       <div className='BrowserRouter'>
+        <Header />
         <Menu />
         <Content />
+        <Footer />
       </div>
     </BrowserRouter>
-    <Footer />
   </div>
 )
 

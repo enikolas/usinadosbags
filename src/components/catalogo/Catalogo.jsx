@@ -19,8 +19,12 @@ const Catalogo = () => (
         width={421}
         height={586}
         orientation='horizontal'
-        showTouchHint={true}
-        flipOnTouch={true}>
+        disableSwipe={true}
+        flipOnTouchZone={40}
+        flipOnTouch={true}
+        uncutPages={true}
+        showHint={true}
+        showTouchHint={true}>
       { images.map((image, i) => <img key={i} src={`${image}`} />) }
     </FlipPage>
   </div>

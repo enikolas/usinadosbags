@@ -18,7 +18,7 @@ const Content = () => (
     <Route path='/fotos' component={Fotos} />
     <Route path='/servicos' component={Servicos} />
     <Route path='/contato' component={Contato} />
-    <Route path='/catalogo' component={Catalogo} />
+    <Route path='/novocatalogo' component={Catalogo} />
   </div>
 )
 
