@@ -14,18 +14,18 @@ import contraCapa from './imagens/contracapazoom.png'
 const images = [capa, page2, page3, page4, page5, page6, page7, contraCapa]
 
 const Catalogo = () => (
-  <div className="Catalogo">
+  <div className='Catalogo'>
     <FlipPage
-        width={421}
-        height={586}
-        orientation='horizontal'
-        disableSwipe={true}
-        flipOnTouchZone={40}
-        flipOnTouch={true}
-        uncutPages={true}
-        showHint={true}
-        showTouchHint={true}>
-      { images.map((image, i) => <img key={i} src={`${image}`} />) }
+      width={421}
+      height={586}
+      orientation='horizontal'
+      disableSwipe
+      flipOnTouchZone={40}
+      flipOnTouch
+      uncutPages
+      showHint
+      showTouchHint>
+      { images.map((image, i) => <img key={i} src={`${image}`} alt='Catalogo Usina dos Bags' />) }
     </FlipPage>
   </div>
 )
