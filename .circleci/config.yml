@@ -14,6 +14,12 @@ jobs:
           keys:
             - v2-dependencies-{{ checksum "package.json" }}
             - v2-dependencies-
+      
+      - run:
+          name: Setup greekeeper-lockfile-update
+          command: |
+            sudo npm install -g npm@latest
+            sudo npm install -g greenkeeper-lockfile@1
 
       - run: npm install
 
@@ -23,7 +29,12 @@ jobs:
             - /tmp/usina-dos-bags/node_modules
 
       - run: npm run lint
-      - run: npm run build
+      - run:
+          name: Build for production
+          command: |
+            greenkeeper-lockfile-update
+            npm run build
+            greenkeeper-lockfile-upload
 
       - persist_to_workspace:
           root: /tmp/usina-dos-bags
