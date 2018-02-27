@@ -20,7 +20,7 @@ jobs:
       - save_cache:
           key: v1-dependencies-{{ checksum "package.json" }}
           paths:
-            - node_modules
+            - /tmp/usina-dos-bags/node_modules
 
       - run: npm run lint
       - run: npm run build
