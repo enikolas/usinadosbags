@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  checkout_code:
+  checkout-code:
     docker:
       - image: circleci/node:8
     working_directory: ~/usina-dos-bags
@@ -11,10 +11,10 @@ jobs:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - ~/usina-dos-bags
-  build:
-    working_directory: ~/usina-dos-bags
+  build-job:
     docker:
       - image: circleci/node:8
+    working_directory: ~/usina-dos-bags
     steps:
       - restore_cache:
         key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
@@ -27,9 +27,9 @@ jobs:
       - run: npm install
 
       - save_cache:
-          paths:
-            - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+          paths:
+            - ~/usina-dos-bags/node_modules
 
       - run: npm run lint
       - run: npm run build
@@ -40,9 +40,9 @@ jobs:
             - ~/usina-dos-bags/build
 
   deploy-job:
-    working_directory: ~/usina-dos-bags
     docker:
-      - image: circleci/node:8  
+      - image: circleci/node:8
+    working_directory: ~/usina-dos-bags
     steps:
       - restore_cache:
         key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
@@ -61,13 +61,13 @@ workflows:
   
   build-and-deploy:
     jobs:
-      - checkout_code
-      - build:
-        required:
-          - checkout_code
+      - checkout-code
+      - build-job:
+          requires:
+            - checkout-code
       - deploy-job:
           requires:
-            - build
+            - build-job
           filters:
             branches:
               only: master
