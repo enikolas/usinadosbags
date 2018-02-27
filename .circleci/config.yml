@@ -12,18 +12,19 @@ jobs:
 
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-
 
       - run: npm install
 
       - save_cache:
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v2-dependencies-{{ checksum "package.json" }}
           paths:
             - /tmp/usina-dos-bags/node_modules
 
       - run: npm run lint
       - run: npm run build
+
       - persist_to_workspace:
           root: /tmp/usina-dos-bags
           paths:
@@ -39,7 +40,8 @@ jobs:
 
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-
 
       - run:
           name: Deploy Master to Firebase
