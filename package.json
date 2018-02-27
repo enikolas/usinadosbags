@@ -18,7 +18,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "standard --verbose",
-    "lint:fix": "standard --fix"
+    "lint:fix": "standard --fix",
+    "deploy": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN"
   },
   "standard": {
     "env": {
@@ -31,12 +32,13 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-flip-page": "^0.14.1",
+    "react-flip-page": "^0.15.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0",
+    "react-scripts": "1.1.1",
     "source-map-explorer": "^1.5.0"
   },
   "devDependencies": {
+    "firebase-tools": "^3.17.4",
     "standard": "^11.0.0"
   }
 }
