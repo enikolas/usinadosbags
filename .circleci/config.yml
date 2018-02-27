@@ -25,7 +25,9 @@ jobs:
       - run: npm run lint
       - run: npm run build
       - persist_to_workspace:
-          root: build
+          root: /tmp/usina-dos-bags
+          paths:
+            - build
 
   deploy:
     <<: *defaults
@@ -33,7 +35,7 @@ jobs:
       - checkout
 
       - attach_workspace:
-          at: /tmp/usina-dos-bags/build
+          at: /tmp/usina-dos-bags
 
       - restore_cache:
           keys:
