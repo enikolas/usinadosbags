@@ -11,7 +11,8 @@ jobs:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - ~/usina-dos-bags
-  build-job:
+
+  build:
     docker:
       - image: circleci/node:8
     working_directory: ~/usina-dos-bags
@@ -39,19 +40,17 @@ jobs:
           paths:
             - ~/usina-dos-bags/build
 
-  deploy-job:
+  deploy:
     docker:
       - image: circleci/node:8
     working_directory: ~/usina-dos-bags
     steps:
       - restore_cache:
-        key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
       - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
+          key: v1-dependencies-{{ checksum "package.json" }}
       - restore_cache:
-        key: v1-build-{{ .Environment.CIRCLE_SHA1 }}
+          key: v1-build-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Deploy Master to Firebase
           command: npm run deploy
@@ -62,12 +61,12 @@ workflows:
   build-and-deploy:
     jobs:
       - checkout-code
-      - build-job:
+      - build:
           requires:
             - checkout-code
-      - deploy-job:
+      - deploy:
           requires:
-            - build-job
+            - build
           filters:
             branches:
               only: master
