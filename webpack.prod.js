@@ -58,13 +58,11 @@ module.exports = merge(common, {
 			minRatio: 0.8
 		}),
 		new WorkboxPlugin({
-			globDirectory: dist,
-			globPatterns: ['**/*.{html,js,css,jpg,png,svg,ttf,gz}'],
 			swDest: path.join(dist, 'sw.js'),
 			clientsClaim: true,
 			skipWaiting: true,
 			runtimeCaching: [{
-				urlPattern: new RegExp('https://usinadosbags.com'),
+				urlPattern: new RegExp('https://usinadosbags.com.br'),
 				handler: 'staleWhileRevalidate'
 			}]		
 		})
