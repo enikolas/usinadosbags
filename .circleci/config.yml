@@ -19,17 +19,17 @@ jobs:
           name: Download dependencies (yarn)
           command: |
             yarn global add greenkeeper-lockfile@1
-            greenkeeper-lockfile-update
             yarn
-            greenkeeper-lockfile-upload
 
       - save_cache:
           key: v3-dependencies-{{ checksum "package.json" }}
           paths:
             - /tmp/usina-dos-bags/node_modules
 
+      - run: greenkeeper-lockfile-update
       - run: yarn lint
       - run: yarn build
+      - run: greenkeeper-lockfile-upload
 
       - persist_to_workspace:
           root: /tmp/usina-dos-bags
