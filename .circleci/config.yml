@@ -12,29 +12,21 @@ jobs:
 
       - restore_cache:
           keys:
-            - v2-dependencies-{{ checksum "package.json" }}
-            - v2-dependencies-
-      
-      - run:
-          name: Setup greekeeper-lockfile-update
-          command: |
-            sudo npm install -g npm@latest
-            sudo npm install -g greenkeeper-lockfile@1
+            - v3-dependencies-{{ checksum "package.json" }}
+            - v3-dependencies-
 
-      - run: npm install
+      - run:
+          name: Download dependencies (yarn)
+          command: |
+            yarn
 
       - save_cache:
-          key: v2-dependencies-{{ checksum "package.json" }}
+          key: v3-dependencies-{{ checksum "package.json" }}
           paths:
             - /tmp/usina-dos-bags/node_modules
 
-      - run: npm run lint
-      - run:
-          name: Build for production
-          command: |
-            greenkeeper-lockfile-update
-            npm run build
-            greenkeeper-lockfile-upload
+      - run: yarn lint
+      - run: yarn build
 
       - persist_to_workspace:
           root: /tmp/usina-dos-bags
@@ -51,12 +43,12 @@ jobs:
 
       - restore_cache:
           keys:
-            - v2-dependencies-{{ checksum "package.json" }}
-            - v2-dependencies-
+            - v3-dependencies-{{ checksum "package.json" }}
+            - v3-dependencies-
 
       - run:
           name: Deploy Master to Firebase
-          command: npm run deploy
+          command: yarn deploy
 
 workflows:
   version: 2
