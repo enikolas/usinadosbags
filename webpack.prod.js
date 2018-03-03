@@ -1,10 +1,13 @@
+const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 const common = require('./webpack.common.js');
+const dist = path.resolve(__dirname, 'build');
 
 module.exports = merge(common, {
 	mode: 'production',
@@ -53,6 +56,17 @@ module.exports = merge(common, {
 			test: /\.js$|\.css$|\.html$/,
 			threshold: 10240,
 			minRatio: 0.8
+		}),
+		new WorkboxPlugin({
+			globDirectory: dist,
+			globPatterns: ['**/*.{html,js,css,jpg,png,svg,ttf,gz}'],
+			swDest: path.join(dist, 'sw.js'),
+			clientsClaim: true,
+			skipWaiting: true,
+			runtimeCaching: [{
+				urlPattern: new RegExp('https://usinadosbags.com'),
+				handler: 'staleWhileRevalidate'
+			}]		
 		})
 	],
 	node: {
