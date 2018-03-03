@@ -14,15 +14,11 @@ jobs:
           keys:
             - v3-dependencies-{{ checksum "package.json" }}
             - v3-dependencies-
-      
-      - run:
-          name: Setup greekeeper-lockfile-update
-          command: |
-            yarn global add greenkeeper-lockfile@1
 
       - run:
           name: Download dependencies (yarn)
           command: |
+						yarn global add greenkeeper-lockfile@1
             greenkeeper-lockfile-update
             yarn
             greenkeeper-lockfile-upload
