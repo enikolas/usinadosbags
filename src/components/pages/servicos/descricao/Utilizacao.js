@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const UtilizacaoList = ({ title, items }) => (
 	<ul className="small">
 		<li className="title">{title}</li>
-		{ items.map(item => <li>{item}</li>) }
+		{ items.map(item => <li key={`${title}-${item}`}>{item}</li>) }
 	</ul>
 );
 
