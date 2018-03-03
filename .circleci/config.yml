@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Download dependencies (yarn)
           command: |
-						yarn global add greenkeeper-lockfile@1
+            yarn global add greenkeeper-lockfile@1
             greenkeeper-lockfile-update
             yarn
             greenkeeper-lockfile-upload
