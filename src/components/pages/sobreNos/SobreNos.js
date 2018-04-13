@@ -49,6 +49,17 @@ alimentícios e afins.
 Estamos localizados em local de fácil acesso para remetermos
 os big bags a qualquer lugar do país.
 			</p>
+
+			<h3>Política de Qualidade</h3>
+
+			<p>
+A Usina dos Bags busca satisfazer as necessidades dos clientes,
+melhorando continuamente os processos na produção de Contentores
+Flexíveis (Big Bag), em parceria com nossos fornecedores,
+desenvolvendo e qualificando constantemente nossos colaboradores;
+Sempre atendendo as solicitações dos clientes, requisitos
+estatutários e partes interessadas.
+			</p>
 		</section>
 	</div>
 );
