@@ -18,7 +18,7 @@ const Footer = () => (
 			<p>Todos os direitos reservados</p>
 			<p>
 				<a href="http://www.solucoesindustriais.com.br/empresa/movimentacao-e-armazenagem/grupo-usina-dos-bags/produtos/todos">
-					<img src={logoSolucoesIndustriais} alt="Soluções Industriais"/>
+					<img src={logoSolucoesIndustriais} alt="Soluções Industriais" />
 				</a>
 			</p>
 		</div>
