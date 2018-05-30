@@ -1,6 +1,7 @@
 import React from 'react';
+
 import './Footer.css';
-import logoSolucoesIndustriais from ' ./logo-solucoes-industriais-white.png';
+import logoSolucoesIndustriais from './logo-solucoes-industriais-white.png';
 
 const Footer = () => (
 	<footer className="Footer">
@@ -15,11 +16,11 @@ const Footer = () => (
 		<div className="right">
 			<h5>Copyright © 2009-2018</h5>
 			<p>Todos os direitos reservados</p>
-      <p>
-        <a href="http://www.solucoesindustriais.com.br/empresa/movimentacao-e-armazenagem/grupo-usina-dos-bags/produtos/todos">
-          <img src={logoSolucoesIndustriais} alt="Soluções Industriais"/>
-        </a>
-	    </p>
+			<p>
+				<a href="http://www.solucoesindustriais.com.br/empresa/movimentacao-e-armazenagem/grupo-usina-dos-bags/produtos/todos">
+					<img src={logoSolucoesIndustriais} alt="Soluções Industriais"/>
+				</a>
+			</p>
 		</div>
 	</footer>
 );
