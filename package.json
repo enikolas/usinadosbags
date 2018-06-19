@@ -17,7 +17,9 @@
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --config webpack.dev.js",
     "lint": "eslint --ext .js src/",
-    "deploy": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN"
+    "deploy": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "standard": {
     "env": {
@@ -32,7 +34,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-flip-page": "^0.15.0",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -60,5 +63,6 @@
     "webpack-dev-server": "^3.1.0",
     "webpack-merge": "^4.1.2",
     "workbox-webpack-plugin": "^2.1.3"
-  }
+  },
+  "snyk": true
 }
