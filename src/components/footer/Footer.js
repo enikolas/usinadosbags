@@ -8,7 +8,7 @@ const Footer = () => (
 		<div className="left">
 			<h5>Usina dos Bags</h5>
 			<p>SP +55 13 3323-0313</p>
-			<p>SP +55 11 2087-1384</p>
+			<p>SP +55 11 2087-1383</p>
 			<br />
 			<p>SP +55 11 9 7240-0140</p>
 			<p>SP +55 11 9 9339-1012</p>
